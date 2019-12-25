@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    height: 375px;
+    width: 667px;
+}
+textarea {
+    min-width: 200px;
+    max-width: 600px;
+    min-height: 150px;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.default {
+visibility: hidden;
+}
+
+.mystyle {
+    width: 200px;
+    height: 200px;
+    visibility: visible;
+}
