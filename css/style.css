@@ -2,27 +2,143 @@
     box-sizing: border-box;
 }
 
-body {
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 20px;
-    height: 375px;
-    width: 667px;
-}
-textarea {
-    min-width: 200px;
-    max-width: 600px;
-    min-height: 150px;
-    max-height: 600px;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     overflow: hidden;
 }
 
-.default {
-visibility: hidden;
+.wrapper {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
-.mystyle {
-    width: 200px;
-    height: 200px;
-    visibility: visible;
+.container, .inner-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+}
+
+.inner-container {
+    border: 2px solid green;
+    border-radius: 5px;
+    margin: 50px 0;
+
+}
+
+form {
+    display: inherit;
+    flex-flow: column wrap ;
+    padding: 10px;
+    height: calc(100% - 20px);
+    align-content: space-between;
+    font-size: large;
+}
+
+form > * {
+    margin-top: 5px;
+}
+
+.formHeader {
+    display: inherit;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: medium;
+    font-family: "Calibri", sans-serif;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: small;
+    font-family: "Arial Hebrew", Arial, sans-serif;
+    font-style: italic;
+    color: #0bd175;
+}
+
+input#expand {
+    text-transform: uppercase;
+    justify-content: center;
+    font-size: small;
+}
+input#submit {
+    text-transform: uppercase;
+    justify-content: center;
+    font-size: small;
+    padding: 5px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+
+textarea {
+    width: 100%;
+    max-width: 600px !important;
+    min-width: 200px;
+    height: 100%;
+    min-height: 200px;
+    background-color: #a98b8b14;
+    border-radius: 5px;
+}
+
+
+@media screen and (min-width: 375px) {
+    .collapse form {
+        height: 80vh;
+        width: 100vw;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .collapse form {
+        height: 80vh;
+        width: 80vw;
+    }
+}
+@media screen and (min-width: 1920px) {
+    .collapse form {
+        height: 80vh;
+        width: 60vw;
+    }
+}
+
+.collapse .expand-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.collapse .hide-on-expand {
+    display: none;
+}
+
+.collapse.container {
+    height: calc(100vh - 30px);
+    background-color: green;
+}
+.collapse textarea {
+    background-color: white;
+    margin: 20px 0;
+    height: 80vh;
+}
+
+.collapse.wrapper {
+    height: calc(100vh - 30px);
+    background-color: green;
+}
+
+.collapse form {
+    height: calc(100vh - 30px);
+    flex-direction: row-reverse;
 }
