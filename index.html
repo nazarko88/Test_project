@@ -5,16 +5,31 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test_task</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
-<link rel="stylesheet" href="css/style.css">
-<script src="js/script.js"></script>
+
 <body>
-<button id="myBtn" onclick="myFunction()">Press to show / hide textarea </button>
-<div>
-<textarea id="myArea" class="default" placeholder="Enter your text here" autofocus>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi distinctio doloribus eveniet explicabo facere illum inventore maiores, ratione reiciendis repudiandae, ut velit veniam. Debitis dolores quisquam repudiandae! Dicta, modi nulla?
-</textarea>
+<div class="wrapper" id="wrapper">
+    <div id="container">
+
+        <div class="hide-on-expand" id="bodyHeader">
+            <h1>zen textarea</h1>
+        </div>
+
+    <div class="inner-container" >
+        <div class="formHeader">
+            <h2 class="hide-on-expand">What's on ypur mind?</h2>
+            <button class="expand-button" id="expand" onclick="doExpand()">Expand</button>
+        </div>
+        <form class="myForm">
+    <textarea id="myArea" class="default" placeholder="Leave a comment here" autofocus>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi distinctio doloribus eveniet explicabo facere illum inventore maiores, ratione reiciendis repudiandae, ut velit veniam. Debitis dolores quisquam repudiandae! Dicta, modi nulla?
+    </textarea>
+            <input type="button" id="submit" class="button hide-on-expand" value="submit comment">
+        </form>
+    </div>
+    </div>
 </div>
 </body>
 </html>
